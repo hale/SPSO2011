@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri380\ql\qnatural
+
+\f0\fs20 \cf0 Developed by: Mahamed G.H. Omran (omran.m@gust.edu.kw) and Maurice Clerc \
+27-May-2011\
+\
+To run SPSO2011:\
+\
+1) Copy all files into the Matlab directory\
+2) Edit test_SPSO2011 to set the following parameters:\
+	a) Nr (Number of runs, default is 25)\
+	b) normalize (default is 0, no normalization)\
+	c) FE_max (number of function evaluations, default is 100,000).\
+	d) N (swarm size, default is 40)\
+3) run test_SPSO2011, it will ask you for the function you want to optimize and the problem's dimension.\
+\
+\pard\pardeftab720\ri380\ql\qnatural
+\cf0 Compatibility with the original C version\
+ \
+1) RNG and numerical instability.\
+ \
+We (Clerc and Omran) conducted several experiments on some benchmark functions. \
+For several functions the results are very similar to the ones of \
+the C version while for one function (CEC F6) the SR is really different:\
+ \
+F6 results (C code):\
+a) No normalization\
+Avg. fitness = 5.69e+01 (2.06e+02)\
+SR= 49.20 %\
+ \
+b) Normalization\
+Avg. fitness = 6.44e+01 (1.57e+02)\
+SR= 37.2 %\
+ \
+F6 results (Matlab code)\
+a) No normalization\
+ \
+Avg. fitness = 6.05e+01(1.58e+02) \
+SR = 0%\
+ \
+b) Normalization\
+ \
+Avg. fitness = 5.12e+01(1.37e+02) \
+SR = 0%\
+ \
+We suspect that there is a problem with the Matlab RNG and/or numerical \
+instability (we implemented a simple RNG using C and Matlab and run our \
+programs and still we got different results).\
+ \
+2) Normalization\
+ \
+It is recommended that you use this option (i.e. randomize = 1) when \
+the search space in not a hypercube. \
+If the search space is a hypercube, It is better not normalize \
+(there is a small difference between the position without any normalisation and the de-normalised one.).\
+ \
+3) Random permutation\
+ \
+The random permutation of the numbering of the particles before \
+each step is not included in the Matlab version(usually, it does not \
+make a great difference in the C version).\
+\
+\
+}
