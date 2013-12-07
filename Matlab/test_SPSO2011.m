@@ -11,7 +11,7 @@ N = 40; %No. of particles
 FE_max = 1e5; %Max. no. of function evaluations
 
 Nr = 25; % No. of runs
-normalize = 0; % 0 => no normalisation, else 1
+normalize = 1; % 0 => no normalisation, else 1
 
 [LB UB opt_f err] = get_fun_info(fun,D);
 
