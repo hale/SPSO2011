@@ -59,6 +59,6 @@ end %r
 
 
 fprintf('SPSO 2011\n');
-fprintf('Avg. fitness = %1.2e(%1.2e) Avg. FEs = %1.2e(%1.2e) SR = %1.2e\n', mean(new_f1), std(new_f1), mean(FE1), std(FE1), 100*(SR1/Nr));
+fprintf('Avg. fitness = %1.2e(%1.2e) Avg. Function Evaluations = %1.2e(%1.2e) Success Rate = %1.2e\n', mean(new_f1), std(new_f1), mean(FE1), std(FE1), 100*(SR1/Nr));
 fprintf('Avg. time = %1.2e(%1.2e)\n', mean(tot_time1), std(tot_time1));
 
